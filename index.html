@@ -71,11 +71,12 @@
 <section class="page" id="contact">
 
     <h2>Contact Me</h2>
-
-    <form id="contactForm">
-
+   
+    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="13818cef-f077-4e2e-8107-8a7ff1d69149">
         <input
-            type="text"
+            type="text" 
+            name="name" 
             id="name"
             placeholder="Full Name"
             required
@@ -84,16 +85,18 @@
         <input
             type="email"
             id="email"
+            name="email"
             placeholder="Email Address"
             required
         >
 
         <textarea
-            id="message"
-            placeholder="Write your message..."
-            rows="8"
-            required
-        ></textarea>
+    id="message"
+    name="message"
+    placeholder="Write Here..."
+    rows="8"
+    required
+>       </textarea>
 
         <button type="submit">
             Send

@@ -165,11 +165,11 @@ body.dark::before {
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,.2);
 
-    line-height: 1.6;       /* KEY: adds breathing room */
-    letter-spacing: 0.3px;  /* makes text less cramped */
+    line-height: 1.6;      
+    letter-spacing: 0.3px; 
     color: rgba(255,255,255,.9);
 
-    max-width: 600px;       /* prevents super long squished lines */
+    max-width: 600px;   
 }
 
 .nav-buttons{
