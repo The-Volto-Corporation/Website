@@ -4,40 +4,34 @@
     box-sizing:border-box;
 }
 
+/* BODY */
 body{
       --background-image: url("images/night.png");
     --text: white;
-
     background-image: var(--background-image);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
     color: var(--text);
     min-height: 100vh;
     transition: background-image .8s ease, color .5s ease;
 }
 
+/* BODY FOR BANNER */
 body::before {
     content: "";
     position: fixed;
     top: 0;
     left: 0;
-
     width: 100%;
     height: 100%;
-
     background-image: url("images/bannerNight.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
-    
-
     z-index: -1;
     pointer-events: none;
-
     transition: opacity 0.8s ease;
 }
 
@@ -47,6 +41,7 @@ body.light{
     --text:white;
 }
 
+/* LIGHT MODE FOR BANNER */
 body.light::before {
     background-image: url("images/bannerSunset.png");
 }
@@ -57,30 +52,17 @@ body.dark{
     --text:white;
 }
 
+/* DARK MODE FOR BANNER */
 body.dark::before {
     background-image: url("images/bannerNight.png");
     
 }
 
+/* DESIGNS FOR LOGO AND INTERACTION */
 .logo-container{
     display:flex;
     justify-content:center;
     align-items:center;
-}
-
-#leftBtn,
-#rightBtn{
-    font-size:50px;
-    background:none;
-    border:none;
-    color:white;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-#leftBtn:hover,
-#rightBtn:hover{
-    transform:scale(1.3);
 }
 
 #logo{
@@ -103,8 +85,7 @@ body.dark::before {
         text-align: center;
     }
 
-
-
+/* PAGE SETUP */
  .page {
     opacity: 0;
     visibility: hidden;
@@ -121,7 +102,6 @@ body.dark::before {
     pointer-events: auto;
 }
 
-
     .projects-wrapper {
     display: flex;
     flex-direction: column;
@@ -129,7 +109,7 @@ body.dark::before {
     margin-top: 30px;
 }
 
-/* PROJECT CARD */
+/* PROJECT CARD TO SHOW IMAGE */
 .project-card {
     display: grid;
     grid-template-columns: 500px 1fr;
@@ -152,7 +132,7 @@ body.dark::before {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.35);
 }
 
-/* TEXT */
+/* INFO FOR THE PROJECT */
 .project-info h3 {
     margin-bottom: 8px;
 }
@@ -170,6 +150,7 @@ body.dark::before {
     max-width: 600px;   
 }
 
+/* BUTTONS TO NAVIGATE BEWTEEN PAGES */
 .nav-buttons{
     display:flex;
     justify-content:center;
@@ -202,6 +183,7 @@ body.dark::before {
     border-color:white;
 }
 
+/* BUTTONS TO GO PLAY THE GAME AND FOR ANY FUTRURE ADDTIONS*/
 .project-buttons{
     margin-top:25px;
     display:flex;
@@ -223,6 +205,7 @@ body.dark::before {
     color:black;
 }
 
+/* THE CONTACT FORM SETUP */
 #contactForm{
     max-width:700px;
     margin:40px auto;
@@ -233,17 +216,13 @@ body.dark::before {
 
 #contactForm input,
 #contactForm textarea{
-
     padding:15px 20px;
     font-size:16px;
     color:white;
-
     background:rgba(255,255,255,.08);
     backdrop-filter:blur(10px);
-
     border:2px solid rgba(255,255,255,.25);
     border-radius:20px;
-
     outline:none;
     transition:.3s;
 }
@@ -269,27 +248,16 @@ body.dark::before {
 }
 
 #contactForm button{
-
     align-self:center;
-
     padding:12px 35px;
-
     font-size:18px;
-
     color:white;
-
     background:rgba(255,255,255,.08);
-
     border:2px solid rgba(255,255,255,.25);
-
     border-radius:30px;
-
     cursor:pointer;
-
     transition:.3s;
-
     backdrop-filter:blur(10px);
-
 }
 
 #contactForm button:hover{
@@ -299,49 +267,33 @@ body.dark::before {
 
 }
 
-/* =========================
-   SOCIAL LINKS
-========================= */
+/* ACCESS TO SOICAL LINKS */
 
 .social-links{
     position:fixed;
-
     top:30px;
     right:30px;
-
     display:flex;
     flex-direction:column;
-
     gap:15px;
-
     z-index:1000;
 }
 
 .social-links a{
-
     display:flex;
     align-items:center;
-
     gap:12px;
-
     text-decoration:none;
-
     color:white;
-
     background:rgba(255,255,255,.08);
     backdrop-filter:blur(10px);
-
     padding:10px 18px;
-
     border-radius:30px;
-
     transition:.3s ease;
 }
 
 .social-links a:hover{
-
     background:rgba(255,255,255,.18);
-
     transform:translateX(-5px);
 
 }
@@ -360,44 +312,27 @@ body.dark::before {
 
 }
 
-/* =========================
-   SCRIPTS
-========================= */
+/* SCRIPTS FOR SHOWING WRITNG PROJECTS*/
 
 .scripts-grid{
-
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
-
     gap:35px;
-
     margin-top:40px;
-
 }
 
 .script-card{
-
     background:rgba(255,255,255,.08);
-
     backdrop-filter:blur(12px);
-
     border-radius:20px;
-
     padding:20px;
-
     text-align:center;
-
     transition:.3s;
-
 }
 
 .script-card:hover{
-
     transform:translateY(-5px);
-
     box-shadow:0 15px 35px rgba(0,0,0,.3);
-
 }
 
 .script-card img {
@@ -405,56 +340,56 @@ body.dark::before {
     max-width: 400px;    
     aspect-ratio: 3 / 4;
     object-fit: cover;
-
     border-radius: 12px;
     margin: 0 auto 18px;
     display: block;
-
     transition: transform .3s ease, box-shadow .3s ease;
 }
 
 .script-card h3{
-
     margin-bottom:12px;
-
     font-size:22px;
-
 }
 
 .script-card p{
-
     line-height:1.6;
-
     color:rgba(255,255,255,.85);
-
     margin-bottom:20px;
-
 }
 
 .script-btn{
-
     display:inline-block;
-
     text-decoration:none;
-
     color:white;
-
     border:2px solid white;
-
     padding:12px 25px;
-
     border-radius:8px;
-
     transition:.3s;
-
 }
 
 .script-btn:hover{
-
     background:white;
-
     color:black;
+}
 
+/* TO PUT THE TITLE AND DESCITPION OF MY PAGE */
+.company-title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 42px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.company-subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,.75);
 }
 
 @keyframes fade {
@@ -468,8 +403,7 @@ body.dark::before {
         }
     }
 
-
-
+    /* STYLE FOR MOBILE PHONES */
 @media (max-width:768px){
 
 .scripts-grid{
@@ -491,14 +425,11 @@ body.dark::before {
 
     .social-links {
         position: static;
-
         display: flex;
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
-
         gap: 10px;
-
         margin-top: 20px;
         margin-bottom: 20px;
     }
@@ -515,39 +446,6 @@ body.dark::before {
 
 
 }
-/* =========================
-   COMPANY TITLE
-========================= */
 
-.company-title {
-
-    text-align: center;
-
-    margin-top: 20px;
-    margin-bottom: 10px;
-
-    font-size: 42px;
-    font-weight: 300;
-
-    letter-spacing: 4px;
-    text-transform: uppercase;
-
-    color: white;
-
-}
-
-.company-subtitle {
-
-    text-align: center;
-
-    margin-bottom: 40px;
-
-    font-size: 18px;
-
-    letter-spacing: 2px;
-
-    color: rgba(255,255,255,.75);
-
-}
 
  
