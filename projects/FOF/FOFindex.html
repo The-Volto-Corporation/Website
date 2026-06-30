@@ -10,46 +10,54 @@
 
 <body>
 
-<div class="gallery-container">
+    <!-- IMAGES FOR THE GALLERY-->
+    <div class="gallery-container">
 
-    <div class="gallery-viewer">
+        <div class="gallery-viewer">
 
-        <button id="prevBtn">&#10094;</button>
+            <button id="prevBtn">&#10094;</button>
 
-        <img id="mainImage"
-             src="./images/concept1.png"
-             alt="Concept Art">
+            <img
+                id="mainImage"
+                src="./Images/concept1.png"
+                alt="Concept Art"
+            >
 
-        <button id="nextBtn">&#10095;</button>
+            <button id="nextBtn">&#10095;</button>
+
+        </div>
+
+        <div class="thumbnail-panel">
+        </div>
 
     </div>
 
-    <div class="thumbnail-panel">
-        <!-- Thumbnails will go here later -->
+    <!-- DESCRIPTION FOR THE IMAGE INCUDLING THE TITLE-->
+    <div class="description-container">
+
+        <h2 id="imageTitle">Face Concept</h2>
+
+        <p id="imageDescription">
+            Description for the concept art will go here.
+        </p>
+
     </div>
 
-</div>
+    <!-- THE LIGHTBOX-->
+    <div id="lightbox" class="lightbox">
+        <img id="lightboxImg" src="" alt="Fullscreen Image">
+    </div>
 
-<div class="description-container">
+    <!-- TO RETURN BACK TO THE HOME PAGE -->
+    <a href="../../index.html" class="back-button">
+        ← Back to Home
+    </a>
 
-    <h2 id="imageTitle">Village Entrance</h2>
+    <!-- SCRIPT -->
+    <script src="FOFscript.js"></script>
 
-    <p id="imageDescription">
-        Description for this concept art will appear here.
-    </p>
-
-</div>
-
-<script src="FOFscript.js"></script>
-
-<div id="lightbox" class="lightbox">
-
-    <img id="lightboxImg" src="" alt="Fullscreen Image">
-
-</div>
-
-<a href="../../index.html" class="back-button">← Back to Home</a>
 </body>
+
 </html>
 
 
