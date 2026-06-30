@@ -6,12 +6,19 @@
 
 body{
 
-    background:#111;
-    color:white;
+    background-color: #111;
+    background-image: url("images/FOFBackground.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
-    font-family:Arial, Helvetica, sans-serif;
+    color: white;
 
-    padding:40px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    padding: 40px;
+    min-height: 100vh;
 
 }
 
@@ -153,14 +160,32 @@ body{
 .description-container {
     margin-top: 40px;
     max-width: 800px;
-    line-height: 1.7;
-    color: rgba(255,255,255,0.85);
 }
 
-.description-container h2{
+.description-container h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: white;
+}
 
-    margin-bottom:15px;
+.description-container p {
+    background: rgba(255,255,255,.08);
+    backdrop-filter: blur(12px);
 
+    padding: 25px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.2);
+
+    font-size: 16px;
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+
+    color: rgba(255,255,255,.9);
 }
 
 /* =========================
